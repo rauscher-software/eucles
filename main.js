@@ -205,6 +205,7 @@ class Instrument {
   }
   newPattern(steps, pulses) {
     this.pattern = [];
+    this.pulses = pulses;
     this.pattern = generateEuclideanPattern(steps, pulses);
   }
   hovered() {
