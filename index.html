@@ -24,6 +24,13 @@
     #start-button:hover {
       background-color: white; color: black;
     }
+    #options-overlay { 
+      position: absolute; width: 100%; height: 100%; margin: 0; padding: 0; 
+    }
+    .options-window {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      color: white;
+    }
   </style>
 </head>
 
@@ -31,15 +38,21 @@
   <div id="start-screen">
     <h1>EUCLES</h1>
     <p>hover necklace to modify</p>
+    <p>- mouse wheel/scroll: rotate necklace</p>
+    <p>- left/right click: add/remove pulses</p>
     <hr>
-    <p>mouse wheel/scroll: rotate necklace</p>
-    <p>left/right click: add/remove pulses</p>
+    <p>
+      hold <strong>shift</strong>
+      and <strong>double click</strong> necklace for <strong>options</strong>
+    </p>
     <hr>
+    <p>s/f: slower/faster | b: enter bpm</p>
     <p>r: random pattern</p>
     <p>p: play/pause</p>
     <br>
     <span id="start-button" onclick="startSketch()">START</span>
   </div>
+  <div id="options-overlay"></div>
 </body>
 
 </html>
