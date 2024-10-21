@@ -109,6 +109,7 @@ function makeOptions(instrument){
       const reader = new FileReader();
       reader.onload = function (e) {
         instrument.sound = loadSound(e.target.result);
+        instrument.sound.setVolume(instrument.vol);
       };
       reader.readAsDataURL(file);
     }
